@@ -1,0 +1,22 @@
+.reminder {
+  background-color: #FFFBF2;
+  width: 95vw;
+  border: 2px solid #FFD580;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.reminder div {
+  display: flex;
+  align-items: center;
+}
+
+.reminder img {
+  width: 30px;
+}
+
+.reminder span {
+  margin-left: 10px;
+  font-size: 20px;
+}

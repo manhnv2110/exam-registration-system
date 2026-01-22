@@ -1,0 +1,188 @@
+.subject-table-container{
+  background-color: white;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.subject-table-wrapper{
+  overflow-x: auto;
+  max-height: 38rem; 
+  overflow-y: auto;
+  position: relative;
+}
+
+.subject-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #f9fafb;
+}
+
+
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.subject-table-header-row {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.subject-table-header {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.subject-table-row-left {
+  text-align: left !important;
+}
+
+.subject-table-header {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.subject-table-header:hover {
+  background-color: #f9fafb;
+}
+
+.subject-table-cell {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.subject-table-cell-code {
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.action-btn {
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  color: #4b5563;
+}
+
+.action-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.action-btn-delete {
+  color: #dc2626;
+}
+
+.action-btn-delete:hover {
+  background-color: #fef2f2;
+}
+
+.action-btn-view {
+  color: #AA50AD;
+}
+
+.action-btn-view:hover {
+  background-color: #FEF0FF;
+}
+
+.action-btn-edit {
+  color: #3b82f6;
+}
+
+.action-btn-edit:hover {
+  background-color: #eff6ff;
+}
+
+.action-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.home-container {
+    padding-top: 6rem; /* Đảm bảo nội dung không bị Header che mất */
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+/* Style cho trạng thái không có Exam */
+.no-exam-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Căn giữa theo chiều dọc */
+    padding: 20px;
+}
+
+.no-exam-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    width: 100%;
+}
+
+.no-exam-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    color: #9ca3af;
+}
+
+.no-exam-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.no-exam-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.no-exam-content p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.5;
+}

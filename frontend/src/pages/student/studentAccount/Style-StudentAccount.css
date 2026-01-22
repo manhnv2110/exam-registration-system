@@ -1,0 +1,179 @@
+.page-account {
+  padding-top: 6rem;
+  position: relative;
+}
+
+.page-account.blr {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.student-account {
+  width: 95%;
+  height: calc(100vh - 10rem);
+  margin: 2rem auto;
+  display: flex;
+  border: 1px solid rgb(229, 226, 226);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.account-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right:  2px solid rgb(229, 226, 226);
+  font-size: 20px;
+  font-weight: 500;
+  width: 16%;
+}
+
+.tab-top .tab-item, .tab-logout {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
+
+.account-tabs svg {
+  font-size: 26px;
+}
+
+.tab-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tab-border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px !important;
+  height: 100%;
+  background-color: #1D6DBD;
+}
+
+.tab-top span, .tab-logout span {
+  margin-left: 10px;
+}
+
+.tab-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 60px;
+  font-size: 16px;
+}
+
+
+.tab-info-content div label {
+  width: 200px;
+}
+
+.tab-info-content div span {
+  font-weight: 500;
+}
+
+.tab-change-password-content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.change-password-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 30px;
+  margin-left: 60px;
+  font-size: 16px;
+}
+
+.change-password-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.change-password-from-label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.change-password-input {
+  color: gray;
+  padding: 5px 10px;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 10px;
+  width: 70%;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.form-actions .btn-change {
+  margin-right: 20px;
+  background-color: #dc3b3b;
+  color: white;
+}
+
+.form-actions .btn-change:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.form-actions .btn-cancel:hover {
+  background-color: rgb(186, 185, 185);
+}
+
+.student-account-active {
+  background-color: #CAE3FF;
+  color: #1D6DBD;
+}
+
+.tab-change-password-content div {
+  position: relative;
+}
+
+.tab-change-password-content div p {
+  position: absolute;
+  font-size: 16px;
+  color: red;
+  top: 75px;
+  left: 5px;
+}
+
+.tab-change-password-content ul {
+  padding: 20px;
+  width: 70%;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  list-style: none;
+}
+
+.tab-change-password-content ul li {
+  display: flex;
+  align-items: center;
+}
+
+.tab-change-password-content ul li svg {
+  color: gray;
+}
+
+.tab-change-password-content ul li span {
+  margin-left: 10px;
+}

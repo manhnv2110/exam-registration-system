@@ -1,0 +1,53 @@
+.selected-location {
+  width: 95vw;
+  border: 2px dashed #1D6DBD;
+  margin: 0 auto;
+  /* box-shadow: 2px 2px 8px rgba(0,0,0,0.3); */
+  padding: 10px 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.selected-location-title {
+  margin-bottom: 3px;
+}
+
+.selected-location-name {
+  font-weight: 600;
+}
+
+.selected-location div {
+  display: flex;
+  align-items: center;
+}
+
+.selected-location img {
+  width: 30px;
+}
+
+.selected-location span {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.selected-location p {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+.selected-location .change-location {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  color:#323234
+}
+
+.change-location svg {
+  font-size: 24px;
+}
+
+.change-location:hover {
+  color: #1D6DBD;
+}

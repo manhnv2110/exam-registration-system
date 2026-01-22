@@ -1,0 +1,53 @@
+.selected-exam-session {
+  width: 95vw;
+  border: 2px dashed #1D6DBD;
+  margin: 0 auto;
+  /* box-shadow: 2px 2px 8px rgba(0,0,0,0.3); */
+  padding: 10px 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.selected-exam-session-title {
+  margin-bottom: 3px;
+}
+
+.selected-exam-session div {
+  display: flex;
+  align-items: center;
+}
+
+.selected-exam-session-name {
+  font-weight: 600;
+}
+
+.selected-exam-session img {
+  width: 30px;
+}
+
+.selected-exam-session span {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.selected-exam-session p {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+.selected-exam-session .change-session {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  color:#323234
+}
+
+.change-session svg {
+  font-size: 24px;
+}
+
+.change-session:hover {
+  color: #1D6DBD;
+}

@@ -1,0 +1,230 @@
+.exam-management-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.exam-management-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.exam-management-card.active {
+  border-top: 6px solid #14d01a;
+}
+
+.exam-management-card.upcoming {
+  border-top: 6px solid #f59e0b;
+}
+.exam-management-card.closed {
+  border-top: 6px solid #f46a6a;
+}
+
+/* Card Header */
+.exam-management-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.exam-management-card-title {
+  font-size: 1.25rem;
+  font-weight: 640;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.exam-management-card-date {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.exam-management-date-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.exam-management-status {
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exam-management-status.active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.exam-management-status.upcoming {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.exam-management-status.closed {
+  background-color: #fbdede;
+  color: #8d1e1e;
+}
+
+/* Statistics */
+.exam-management-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-management-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-card-subjects {
+  background-color: #eff6ff;
+}
+
+.stat-card-sessions {
+  background-color: #f0fdf4;
+}
+
+.stat-card-registrations {
+  background-color: #fff7ed;
+}
+
+.stat-card-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.stat-card-value {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.stat-card-subjects .stat-card-value {
+  color: #2563eb;
+}
+
+.stat-card-sessions .stat-card-value {
+  color: #16a34a;
+}
+
+.stat-card-registrations .stat-card-value {
+  color: #ea580c;
+}
+
+/* Subjects Section */
+.subjects-section {
+  margin-bottom: 1.5rem;
+}
+
+.subjects-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 0.75rem 0;
+}
+
+.subjects-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.subject-tag {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border-radius: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.exam-management-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.exam-mangement-btn-action {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.exam-management-action-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.exam-management-btn-view {
+  background-color: #2563eb;
+  color: white;
+}
+
+.exam-management-btn-view:hover {
+  background-color: #1d4ed8;
+}
+
+.exam-management-btn-add {
+  background-color: #2563eb;
+  color: white;
+}
+
+.exam-management-btn-add:hover {
+  background-color: #1d4ed8;
+}
+
+.exam-management-btn-edit {
+  background-color: #16a34a;
+  color: white;
+}
+
+.exam-management-btn-edit:hover {
+  background-color: #15803d;
+}
+
+.exam-management-btn-close {
+  background-color:#f97316;
+  color: white;
+}
+
+.exam-management-btn-close:hover {
+  background-color: #c46928
+}
+.exam-management-btn-delete {
+  background-color: #e24040;
+  color: white;
+}
+
+.exam-management-btn-delete:hover {
+  background-color: #b91c1c;
+}
+.exam-management-btn-open {
+  background-color: #bb18c7;
+  color: white;
+}
+
+.exam-management-btn-open:hover {
+  background-color: #811288;
+}

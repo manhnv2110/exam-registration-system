@@ -1,0 +1,203 @@
+.session-table-container {
+  background-color: white;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  overflow: visible; /* Thay đổi từ hidden sang visible */
+}
+
+.session-table-wrapper {
+  overflow-x: auto;
+  max-height: 30rem; 
+  overflow-y: auto;
+  position: relative; /* Thêm position relative */
+}
+
+/* Tùy chỉnh thanh cuộn */
+.session-table-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.session-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.session-table-wrapper::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.session-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.session-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.session-table-row {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.session-table-header {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.session-row {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+  position: relative; /* Thêm để dropdown có thể position tương đối với row */
+}
+
+.session-row:hover {
+  background-color: #f9fafb;
+}
+
+.session-table-cell {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.session-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  font-size: 0.813rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Trạng thái đầy */
+.session-status-full {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+}
+
+.session-status-full::before {
+  background-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+.session-status-full:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.25);
+}
+
+/* Trạng thái còn chỗ */
+.session-status-available {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #16a34a;
+  border: 1px solid #86efac;
+}
+
+.session-status-available::before {
+  background-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+}
+
+.session-status-available:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
+}
+
+/* Action Icon */
+.session-action-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.session-table-action {
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.session-table-action:hover,
+.session-table-action.active {
+  color: #7c7c7d;
+}
+
+/* Dropdown Menu */
+.session-dropdown-menu {
+  position: fixed; /* Thay đổi từ absolute sang fixed */
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  z-index: 9999; /* Tăng z-index cao hơn */
+  overflow: hidden;
+  animation: dropdown-fade-in 0.15s ease-out;
+}
+
+@keyframes dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.session-dropdown-item {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #374151;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.session-dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.session-dropdown-item-danger:hover {
+  background-color: #fee2e2;
+}
+.session-students-icon {
+  height: 1.3rem;
+  width: 1.3rem;
+  color: #2b52d0;
+}
+.session-edit-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  color: #2fd055;
+}
+.session-delete-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  color: #dc364c;
+}

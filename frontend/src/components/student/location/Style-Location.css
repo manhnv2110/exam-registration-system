@@ -1,0 +1,78 @@
+.location {
+  position: relative;
+  padding: 1.2rem 1.3rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.location:hover {
+  transform: translateY(-2px);
+  border-color: rgba(42, 141, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(42, 141, 255, 0.15);
+}
+
+.location .location-info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.location-title {
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.location .location-status {
+  background-color: #CAE3FF;
+  padding: 2px 10px;
+  color: #1D6DBD;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.location .location-status.full {
+  background-color: #FFD0D0;
+  color: #EC3E3E;
+}
+
+/* Enhanced Selected State */
+.location.selected {
+  border: 2px solid #2A8DFF;
+  box-shadow: 0 6px 20px rgba(42, 141, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.location.selected:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(42, 141, 255, 0.3);
+}
+
+.location.selected .location-title {
+  color: #2A8DFF;
+  font-weight: 600;
+}
+
+.location.selected .location-status {
+  box-shadow: 0 2px 8px rgba(42, 141, 255, 0.2);
+}
+
+/* Tick Icon */
+.location img {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.location img.ticked {
+  opacity: 1;
+  transform: scale(1);
+}
+

@@ -1,0 +1,149 @@
+.login-page {
+  position: relative;
+}
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/bg-login.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login.blur {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-panel img {
+  width: 150px;
+}
+
+.left-panel span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1D6DBD;
+}
+
+.right-panel {
+  width: 30%;
+  color: #0072BC;
+}
+
+.right-panel .login-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 60px;
+  font-size: 16px;
+}
+
+.right-panel h1 { 
+  text-align: center;
+}
+
+.right-panel .login-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel .login-form div label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.right-panel .login-form div input {
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  border-bottom: 2px solid #CAE3FF;
+  color: #0072BC;
+  outline: none;
+}
+
+.right-panel .login-form div input:focus {
+  border-color: #0072BC;
+}
+
+.right-panel .login-form .forgot-password {
+  text-align: right;
+  font-size: 14px;
+}
+
+.right-panel .login-form .forgot-password span {
+  cursor: pointer;
+}
+
+.right-panel .login-form .forgot-password span:hover {
+  color: red;
+}
+
+
+.right-panel .login-form button {
+  display: none;
+}
+
+.right-panel .login-form .password-login {
+  position: relative;
+}
+
+.right-panel .login-form .invalid {
+  position: absolute;
+  left: 5px;
+  margin-top: 5px;
+  top: 100%;
+  color: red;
+  font-size: 14px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.right-panel .login-form .invalid.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: none;
+}
+
+.login-page-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1024px) {
+  .login {
+    flex-direction: column;
+  }
+  
+  .login-form {
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .right-panel {
+    width: 80%;
+  }
+
+  .login-form div {
+    margin: 0 auto;
+    width: 70%;
+  }
+}

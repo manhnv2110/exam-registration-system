@@ -1,0 +1,210 @@
+.edit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.edit-modal-main {
+  background-color: white;
+  border-radius: 1rem;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: slideUp 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  max-height: 95vh;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.edit-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.edit-modal-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* Body */
+.edit-modal-body {
+  padding: 1.5rem 1.75rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Form */
+.edit-student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.edit-student-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.edit-student-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.edit-student-form-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.required {
+  color: #dc2626;
+}
+
+.edit-student-form-input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: #111827;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+.edit-student-form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.edit-student-form-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Select Styling */
+.edit-student-form-input[type="date"],
+select.edit-student-form-input {
+  cursor: pointer;
+}
+
+.edit-student-form-input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.edit-student-form-input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  background-color: #f3f4f6;
+}
+
+/* Footer */
+.edit-student-modal-footer {
+  padding: 1rem 1.75rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.875rem;
+  flex-shrink: 0;
+}
+
+.edit-student-modal-footer .btn-cancel {
+  padding: 0.625rem 1.25rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.875rem;
+}
+
+.edit-student-modal-footer .btn-cancel:hover {
+  background-color: #e5e7eb;
+}
+
+.edit-student-modal-footer .btn-save {
+  padding: 0.625rem 1.25rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.875rem;
+}
+
+.edit-student-modal-footer .btn-save:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+  .edit-student-form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .edit-modal-header {
+    padding: 1rem 1.25rem;
+  }
+  
+  .edit-modal-body {
+    padding: 1.25rem;
+  }
+  
+  .edit-student-modal-footer {
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  .edit-modal-main {
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .edit-modal-title {
+    font-size: 1.125rem;
+  }
+}

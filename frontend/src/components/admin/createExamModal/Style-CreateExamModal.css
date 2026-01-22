@@ -1,0 +1,169 @@
+.create-exam-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* phủ kín màn */
+    background-color: rgba(0, 0, 0, 0.5) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    animation: fadeIn 0.2s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.create-exam-modal-main {
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh; 
+    /* giới hạn chiều cao tối đa bằng 90% chiều cao khung hình trình duyệt */
+    overflow-y: auto;
+    /* Nếu nội dung dài hơn max-height sẽ xuất hiện thanh cuộn dọc */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease-out;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.create-exam-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.create-exam-modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+.create-exam-modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+.create-exam-modal-close-btn:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+.create-exam-modal-close-icon {
+    width: 2rem;
+    height: 2rem;
+}
+.create-exam-modal-form {
+  padding: 1.5rem;
+}
+.create-exam-form-group {
+  margin-bottom: 1.5rem;
+}
+.create-exam-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+.required {
+  color: #ef4444;
+}
+.create-exam-form-input,
+.create-exam-form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  outline: none;
+  box-sizing: border-box;
+}
+.create-exam-form-input:focus,
+.create-exam-form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.create-exam-form-input-fullwidth {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.create-exam-form-textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+.create-exam-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+
+.create-exam-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 0.7rem;
+}
+
+.create-exam-modal-btn-cancel,
+.create-exam-modal-btn-submit {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.create-exam-modal-btn-cancel {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.create-exam-modal-btn-cancel:hover {
+  background-color: #e5e7eb;
+}
+
+.create-exam-modal-btn-submit {
+  background-color: #2563eb;
+  color: white;
+}
+
+.create-exam-modal-btn-submit:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+}
+

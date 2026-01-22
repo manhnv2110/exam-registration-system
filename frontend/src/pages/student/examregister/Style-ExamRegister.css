@@ -1,0 +1,88 @@
+.exam-register {
+  padding-top: 6rem;
+  position: relative;
+}
+
+.exam-register.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.pos,
+.session {
+  padding-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.pos img,
+.session img {
+  width: 30px;
+}
+
+.pos span,
+.session span {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.locations, .exam-sessions {
+  width: 95%;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.exam-register button {
+  display: block;
+  margin: 40px auto 20px;
+  padding: 10px 20px;
+  background-color: #2A8DFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.exam-register button:active {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2) inset;
+}
+
+.exam-register button:hover {
+  transform: scale(1.2);
+}
+.select-exam-session-icon {
+  width: 2.3rem !important; 
+  height: 2.5rem;
+}
+.exam-register .location-warning,
+.exam-register .exam-session-warning {
+  margin-top: 0px;
+  width: fit-content;
+  margin: 0 auto;
+  color: red;
+  transition: opacity 0.3s ease;
+}
+
+.register-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 1900px) {
+  .locations, .exam-sessions {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .locations, .exam-sessions {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

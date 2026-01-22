@@ -1,0 +1,117 @@
+.student-table-container {
+  background-color: white;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.student-table-wrapper {
+  overflow-x: auto;
+  max-height: 38rem; 
+  overflow-y: auto;
+}
+.student-table-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.student-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.student-table-wrapper::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.student-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.student-table-management {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table-header-row {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.student-table-header {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.student-table-row {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.student-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.student-table-cell {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #111827;
+}
+.student-table-row-left {
+  text-align: left;
+}
+.student-code {
+  font-weight: 500;
+}
+
+.student-table-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.student-action-btn {
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  color: #4b5563;
+}
+
+.student-action-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.student-action-btn-delete {
+  color: #dc2626;
+}
+
+.student-action-btn-delete:hover {
+  background-color: #fef2f2;
+}
+
+.student-action-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.student-action-btn-view {
+    color: #AA50AD;
+}
+.student-action-btn-view:hover {
+    background-color: #FEF0FF;
+}
+
