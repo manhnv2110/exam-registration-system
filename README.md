@@ -56,13 +56,6 @@ This project showcases a production-ready cloud deployment on AWS, demonstrating
 | **Private** | DB Subnet 1 | 10.0.21.0/24 | us-east-1a | RDS MySQL Primary |
 | **Private** | DB Subnet 2 | 10.0.22.0/24 | us-east-1b | RDS MySQL Standby |
 
-**Traffic Flow**:
-- **Internet → Frontend**: AWS Amplify (CDN + static hosting)
-- **Internet → Backend**: Internet Gateway → Public Subnet → NAT Gateway → Private App Subnet → ECS Tasks
-- **Backend → Database**: Private App Subnet → Private DB Subnet (internal VPC routing)
-- **Backend → Internet**: Private App Subnet → NAT Gateway → Internet Gateway
-- **Monitoring Access**: EC2 Bastion (Public Subnet) → SSH/HTTP access to Prometheus/Grafana
-
 **High Availability Setup**:
 - ✅ Multi-AZ deployment (2 Availability Zones)
 - ✅ Redundant NAT Gateways for fault tolerance
